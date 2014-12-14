@@ -1,4 +1,8 @@
 #include "scienceservice.h"
+#include <iostream>
+
+using namespace std;
+
 
 ScienceService::ScienceService() {
     scientistRepository = ScientistRepository();

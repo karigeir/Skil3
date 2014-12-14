@@ -50,6 +50,8 @@ int ConsoleUI::respondToMessage() {
         // Handle all available commands and throw error on unknown ones
         if(userRequest.find("addScientist") != std::string::npos)
         {
+
+
             clear();
             Scientist additionalScientist = Scientist();
             std::cout << "Enter the name of the scientist: ";
