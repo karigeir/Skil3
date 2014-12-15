@@ -29,3 +29,5 @@ void MainWindow::on_Menu_Box_currentIndexChanged(const QString &arg1)
         addScientist->show();
     }
 }
+
+

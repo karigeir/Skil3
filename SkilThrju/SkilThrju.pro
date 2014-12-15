@@ -28,7 +28,8 @@ SOURCES += main.cpp\
         scientistrepository.cpp\
         utilities.cpp\
         computer.cpp \
-    addscientist.cpp
+    addscientist.cpp \
+    orderscientists.cpp
 
 
 HEADERS  += mainwindow.h\
@@ -45,8 +46,10 @@ HEADERS  += mainwindow.h\
             scientist.h\
             scientistrepository.h\
             utilities.h \
-    addscientist.h
+    addscientist.h \
+    orderscientists.h
 
 
 FORMS    += mainwindow.ui \
-    addscientist.ui
+    addscientist.ui \
+    orderscientists.ui
