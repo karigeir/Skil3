@@ -76,6 +76,13 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>ScientistDOD_lineEdit</tabstop>
+  <tabstop>ScientistGender_lineEdit</tabstop>
+  <tabstop>ScientistDOB_lineEdit</tabstop>
+  <tabstop>ScientistName_lineEdit</tabstop>
+  <tabstop>AddScientist_pushButton</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
