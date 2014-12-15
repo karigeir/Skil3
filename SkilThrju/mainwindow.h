@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include "addscientist.h"
 #include "addcomputer.h"
-#include "searchscientist.h"
+#include "orderscientists.h"
 
 namespace Ui {
 class MainWindow;
@@ -25,9 +25,7 @@ private:
     Ui::MainWindow *ui;
     AddScientist* addScientist;
     AddComputer* addComputer;
-    SearchScientist* searchScientist;
-
-
+    orderScientists* orderScientist;
 };
 
 #endif // MAINWINDOW_H

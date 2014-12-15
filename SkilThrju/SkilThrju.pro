@@ -30,7 +30,6 @@ SOURCES += main.cpp\
         computer.cpp \
     addscientist.cpp \
     addcomputer.cpp \
-    searchscientist.cpp\
     orderscientists.cpp
 
 
@@ -51,12 +50,10 @@ HEADERS  += mainwindow.h\
             utilities.h \
     addscientist.h \
     addcomputer.h \
-    searchscientist.h\
     orderscientists.h
 
 
 FORMS    += mainwindow.ui \
     addscientist.ui \
     addcomputer.ui \
-    searchscientist.ui\
     orderscientists.ui

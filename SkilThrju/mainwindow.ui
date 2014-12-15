@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>315</width>
-    <height>289</height>
+    <width>627</width>
+    <height>378</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -37,22 +37,7 @@
       </item>
       <item>
        <property name="text">
-        <string>Order Scientists</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Order Computers</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Search for a Scientist</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Search for a Computer</string>
+        <string>Display Scientists</string>
        </property>
       </item>
      </widget>
@@ -64,7 +49,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>315</width>
+     <width>627</width>
      <height>26</height>
     </rect>
    </property>

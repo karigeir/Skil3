@@ -119,53 +119,53 @@ std::list<Scientist> ScientistRepository::list(int col, int mod)
     QSqlDatabase db = databaseConnect();
     QSqlQuery query(db);
 
-    string sorter;
+//    string sorter;
 
-    switch(col)
-    {
-        case 1:
-           if (mod == 1)
-           {
-               sorter = "Select * from Scientists order by Name ASC";
-           }
-           else if (mod == 2)
-           {
-               sorter = "Select * from Scientists order by Name DESC";
-           }
-           break;
-    case 2:
-        if (mod == 1)
-        {
-            sorter = "Select * from Scientists order by DateOfBirth ASC";
-        }
-        else if (mod == 2)
-        {
-            sorter = "Select * from Scientists order by DateOfBirth DESC";
-        }
-        break;
-    case 3:
-        if (mod == 1)
-        {
-            sorter = "Select * from Scientists order by DateOfDeath ASC";
-        }
-        else if (mod == 2)
-        {
-            sorter = "Select * from Scientists order by DateOfDeath DESC";
-        }
-        break;
-    case 4:
-        if (mod == 1)
-        {
-            sorter = "Select * from Scientists order by Gender ASC";
-        }
-        else if (mod == 2)
-        {
-            sorter = "Select * from Scientists order by Gender DESC";
-        }
-        break;
-    }
+//    switch(col)
+//    {
+//        case 1:
+//           if (mod == 1)
+//           {
+//               sorter = "Select * from Scientists order by Name ASC";
+//           }
+//           else if (mod == 2)
+//           {
+//               sorter = "Select * from Scientists order by Name DESC";
+//           }
+//           break;
+//    case 2:
+//        if (mod == 1)
+//        {
+//            sorter = "Select * from Scientists order by DateOfBirth ASC";
+//        }
+//        else if (mod == 2)
+//        {
+//            sorter = "Select * from Scientists order by DateOfBirth DESC";
+//        }
+//        break;
+//    case 3:
+//        if (mod == 1)
+//        {
+//            sorter = "Select * from Scientists order by DateOfDeath ASC";
+//        }
+//        else if (mod == 2)
+//        {
+//            sorter = "Select * from Scientists order by DateOfDeath DESC";
+//        }
+//        break;
+//    case 4:
+//        if (mod == 1)
+//        {
+//            sorter = "Select * from Scientists order by Gender ASC";
+//        }
+//        else if (mod == 2)
+//        {
+//            sorter = "Select * from Scientists order by Gender DESC";
+//        }
+//        break;
+//    }
 
-    query.exec(QString::fromStdString(sorter));
+    //query.exec(QString::fromStdString(sorter));
 
     std::list<Scientist> scientists = std::list<Scientist>();
 
