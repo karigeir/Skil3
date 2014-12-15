@@ -20,8 +20,6 @@ AddScientist::~AddScientist()
 
 void AddScientist::on_AddScientist_pushButton_clicked()
 {
-    ui->ScientistName_lineEdit->text().toStdString();
-
     Scientist a = Scientist();
     a.name = ui->ScientistName_lineEdit->text().toStdString();
     a.dateOfBirth = ui->ScientistDOB_lineEdit->text().toStdString();
@@ -29,8 +27,3 @@ void AddScientist::on_AddScientist_pushButton_clicked()
     a.gender = ui->ScientistGender_lineEdit->text().toStdString();
     scienceService.addScientist(a);
 }
-
-//void AddScientist::on_ScientistName_lineEdit_textChanged(const QString &arg1)
-//{
-//    ui->ScientistName_lineEdit->text().toStdString()
-//}

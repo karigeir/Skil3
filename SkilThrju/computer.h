@@ -11,7 +11,7 @@ public:
     string name;
     string yearBuilt;
     string type;
-    bool was_built;
+    string was_built;
 };
 
 #endif // COMPUTER_H

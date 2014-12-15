@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddComputer</class>
+ <widget class="QWidget" name="AddComputer">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>348</width>
+    <height>277</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPushButton" name="AddComputer_pushButton">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>170</y>
+     <width>142</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Add</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>50</y>
+     <width>139</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLineEdit" name="ComputerName_lineEdit"/>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="ComputerYearBuilt_lineEdit"/>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="ComputerType_lineEdit"/>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="ComputerWasBuilt_lineEdit"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>50</y>
+     <width>55</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QLabel" name="ComputerName">
+      <property name="text">
+       <string>Name</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="YearBuilt">
+      <property name="text">
+       <string>Year Built</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="ComputerType">
+      <property name="text">
+       <string>Type</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="ComputerWasBuilt">
+      <property name="text">
+       <string>Was Built</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

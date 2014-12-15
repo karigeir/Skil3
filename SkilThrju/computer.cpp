@@ -8,6 +8,6 @@ Computer::Computer()
     name = "";
     yearBuilt = "";
     type = "";
-    was_built = true;
+    was_built = "";
 }
 

@@ -45,8 +45,7 @@ void ComputerRepository::add(Computer a)
     QVariant qstrName = QVariant(QString::fromStdString(a.name));
     QVariant qstrYearBuilt = QVariant(QString::fromStdString(a.yearBuilt));
     QVariant qstrType = QVariant(QString::fromStdString(a.type));
-    QVariant qstrWas_Built = QVariant(a.was_built);
-
+    QVariant qstrWas_Built = QVariant(QString::fromStdString(a.was_built));
 
     query.prepare("INSERT INTO Computers ('Name', 'YearBuilt', 'Type', 'Was_Built')"
                               "VALUES(:Name, :YearBuilt, :Type, :Was_Built)");
