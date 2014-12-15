@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include "addscientist.h"
+#include "addcomputer.h"
+#include "searchscientist.h"
 
 namespace Ui {
 class MainWindow;
@@ -22,6 +24,10 @@ private slots:
 private:
     Ui::MainWindow *ui;
     AddScientist* addScientist;
+    AddComputer* addComputer;
+    SearchScientist* searchScientist;
+
+
 };
 
 #endif // MAINWINDOW_H

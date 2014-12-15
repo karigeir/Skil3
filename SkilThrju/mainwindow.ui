@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>243</width>
-    <height>242</height>
+    <width>315</width>
+    <height>289</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -45,6 +45,16 @@
         <string>Order Computers</string>
        </property>
       </item>
+      <item>
+       <property name="text">
+        <string>Search for a Scientist</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Search for a Computer</string>
+       </property>
+      </item>
      </widget>
     </item>
    </layout>
@@ -54,8 +64,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>243</width>
-     <height>21</height>
+     <width>315</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>

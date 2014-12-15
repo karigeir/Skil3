@@ -28,7 +28,9 @@ SOURCES += main.cpp\
         scientistrepository.cpp\
         utilities.cpp\
         computer.cpp \
-    addscientist.cpp
+    addscientist.cpp \
+    addcomputer.cpp \
+    searchscientist.cpp
 
 
 HEADERS  += mainwindow.h\
@@ -45,8 +47,12 @@ HEADERS  += mainwindow.h\
             scientist.h\
             scientistrepository.h\
             utilities.h \
-    addscientist.h
+    addscientist.h \
+    addcomputer.h \
+    searchscientist.h
 
 
 FORMS    += mainwindow.ui \
-    addscientist.ui
+    addscientist.ui \
+    addcomputer.ui \
+    searchscientist.ui
