@@ -6,118 +6,75 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>618</width>
-    <height>360</height>
+    <width>249</width>
+    <height>205</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLineEdit" name="ScientistName_lineEdit">
-   <property name="geometry">
-    <rect>
-     <x>250</x>
-     <y>60</y>
-     <width>113</width>
-     <height>22</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>140</x>
-     <y>60</y>
-     <width>53</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Name</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="AddScientist_pushButton">
-   <property name="geometry">
-    <rect>
-     <x>220</x>
-     <y>260</y>
-     <width>93</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Add</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>140</x>
-     <y>100</y>
-     <width>81</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Date of Birth</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="ScientistDOB_lineEdit">
-   <property name="geometry">
-    <rect>
-     <x>250</x>
-     <y>100</y>
-     <width>113</width>
-     <height>22</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>140</x>
-     <y>140</y>
-     <width>81</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Date of Death</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_4">
-   <property name="geometry">
-    <rect>
-     <x>140</x>
-     <y>180</y>
-     <width>81</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Gender</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="ScientistDOD_lineEdit">
-   <property name="geometry">
-    <rect>
-     <x>250</x>
-     <y>140</y>
-     <width>113</width>
-     <height>22</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="ScientistGender_lineEdit">
-   <property name="geometry">
-    <rect>
-     <x>250</x>
-     <y>180</y>
-     <width>113</width>
-     <height>22</height>
-    </rect>
-   </property>
-  </widget>
+  <layout class="QFormLayout" name="formLayout">
+   <item row="5" column="1">
+    <widget class="QLineEdit" name="ScientistDOD_lineEdit"/>
+   </item>
+   <item row="7" column="1">
+    <widget class="QLineEdit" name="ScientistDOB_lineEdit"/>
+   </item>
+   <item row="9" column="1">
+    <widget class="QLineEdit" name="ScientistName_lineEdit"/>
+   </item>
+   <item row="6" column="1">
+    <widget class="QLineEdit" name="ScientistGender_lineEdit"/>
+   </item>
+   <item row="10" column="1">
+    <widget class="QPushButton" name="AddScientist_pushButton">
+     <property name="text">
+      <string>Add</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Date of Birth</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Date of Death</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Name</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>Gender</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>

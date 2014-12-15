@@ -6,57 +6,56 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>710</width>
-    <height>485</height>
+    <width>243</width>
+    <height>242</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QComboBox" name="Menu_Box">
-    <property name="geometry">
-     <rect>
-      <x>230</x>
-      <y>140</y>
-      <width>211</width>
-      <height>51</height>
-     </rect>
+   <layout class="QFormLayout" name="formLayout">
+    <property name="fieldGrowthPolicy">
+     <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
     </property>
-    <item>
-     <property name="text">
-      <string>Choose an item below..</string>
-     </property>
+    <item row="2" column="1">
+     <widget class="QComboBox" name="Menu_Box">
+      <item>
+       <property name="text">
+        <string>Choose an item below..</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Add a Scientist</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Add a Computer</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Order Scientists</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Order Computers</string>
+       </property>
+      </item>
+     </widget>
     </item>
-    <item>
-     <property name="text">
-      <string>Add a Scientist</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Add a Computer</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Order Scientists</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Order Computers</string>
-     </property>
-    </item>
-   </widget>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>710</width>
-     <height>26</height>
+     <width>243</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>
