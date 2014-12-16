@@ -150,5 +150,26 @@ std::list<Computer> ComputerRepository::search(std::string searchTerm)
     return computers;
 }
 
+std::list<Computer> ComputerRepository::list() {
+
+    std::list<Computer> computers = std::list<Computer>();
+
+    QSqlDatabase db = databaseConnect();
+    QSqlQuery query(db);
+
+    query.exec("SELECT * FROM Computers");
+
+    while(query.next()){
+        Computer a = Computer();
+        a.name = query.value("Name").toString().toStdString();
+        a.yearBuilt = query.value("YearBuilt").toString().toStdString();
+        a.type= query.value("Type").toString().toStdString();
+        a.was_built = query.value("Was_Built").toString().toStdString();
+        computers.push_back(a);
+    }
+
+    return computers;
+}
+
 
 

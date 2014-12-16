@@ -18,3 +18,9 @@ std::list<Computer> ComputerService::getComputersOrderedBy(char col, char mod) {
 std::list<Computer> ComputerService::search(std::string searchTerm) {
     return compRepository.search(searchTerm);
 }
+
+std::list<Computer> ComputerService::getAllComputers()
+{
+    cout << "kallar i fall";
+    return compRepository.list();
+}

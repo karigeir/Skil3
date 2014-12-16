@@ -6,8 +6,8 @@
 
 using namespace std;
 
-AddScientist::AddScientist(QWidget *parent) :
-    QWidget(parent),
+AddScientist::AddScientist() :
+    QWidget(),
     ui(new Ui::AddScientist)
 {
     ui->setupUi(this);

@@ -12,6 +12,7 @@ public:
     void add(Computer additionalComputer);
     std::list<Computer> getComputersOrderedBy(char col, char mod);
     std::list<Computer> search(std::string searchTerm);
+    std::list<Computer> getAllComputers();
 private:
     ComputerRepository compRepository;
 };

@@ -25,19 +25,24 @@ void MainWindow::on_Menu_Box_currentIndexChanged(const QString &arg1)
 
     if (ui->Menu_Box->currentText() == "Add a Scientist")
     {
-        addScientist = new AddScientist(this);
+        addScientist = new AddScientist();
         addScientist->show();
 
     }
     else if (ui->Menu_Box->currentText() == "Add a Computer")
     {
-        addComputer = new AddComputer(this);
+        addComputer = new AddComputer();
         addComputer->show();
     }
     else if (ui->Menu_Box->currentText() == "Display Scientists")
     {
-        orderScientist = new orderScientists(this);
+        orderScientist = new orderScientists();
         orderScientist->show();
+    }
+    else if (ui->Menu_Box->currentText() == "Display Computers")
+    {
+        OrderComputers = new orderComputers();
+        OrderComputers->show();
     }
 }
 

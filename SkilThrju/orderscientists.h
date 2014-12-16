@@ -13,7 +13,7 @@ class orderScientists : public QWidget
     Q_OBJECT
 
 public:
-    explicit orderScientists(QWidget *parent = 0);
+    explicit orderScientists();
     ~orderScientists();
     ScienceService scienceService;
 

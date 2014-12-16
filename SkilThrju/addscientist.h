@@ -14,7 +14,7 @@ class AddScientist : public QWidget
     Q_OBJECT
 
 public:
-    explicit AddScientist(QWidget *parent = 0);
+    explicit AddScientist();
     ~AddScientist();
     ScienceService scienceService;
 

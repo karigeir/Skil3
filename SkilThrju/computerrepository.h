@@ -12,6 +12,7 @@ public:
     QSqlDatabase databaseConnect();
     std::list<Computer> list(int col, int mod);
     std::list<Computer> search(std::string searchTerm);
+    std::list<Computer> list();
 };
 
 #endif // COMPUTERREPOSITORY_H

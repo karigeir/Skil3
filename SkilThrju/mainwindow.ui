@@ -43,6 +43,11 @@
         <string>Display Scientists</string>
        </property>
       </item>
+      <item>
+       <property name="text">
+        <string>Display Computers</string>
+       </property>
+      </item>
      </widget>
     </item>
    </layout>

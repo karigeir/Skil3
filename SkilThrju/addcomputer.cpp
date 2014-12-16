@@ -2,8 +2,8 @@
 #include "computer.h"
 #include "ui_addcomputer.h"
 
-AddComputer::AddComputer(QWidget *parent) :
-    QWidget(parent),
+AddComputer::AddComputer() :
+    QWidget(),
     ui(new Ui::AddComputer)
 {
     ui->setupUi(this);

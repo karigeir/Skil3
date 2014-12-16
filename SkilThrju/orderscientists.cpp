@@ -11,8 +11,8 @@
 
 using namespace std;
 
-orderScientists::orderScientists(QWidget *parent) :
-    QWidget(parent),
+orderScientists::orderScientists() :
+    QWidget(),
     ui(new Ui::orderScientists)
 {
     ui->setupUi(this);

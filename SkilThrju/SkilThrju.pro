@@ -31,7 +31,8 @@ SOURCES += main.cpp\
     addscientist.cpp \
     addcomputer.cpp \
     orderscientists.cpp\
-    connect.cpp
+    connect.cpp \
+    ordercomputers.cpp
 
 
 
@@ -52,11 +53,13 @@ HEADERS  += mainwindow.h\
             addscientist.h\
             addcomputer.h\
             orderscientists.h\
-            connect.h
+            connect.h \
+    ordercomputers.h
 
 
 FORMS    += mainwindow.ui\
             addscientist.ui\
             addcomputer.ui\
             orderscientists.ui\
-            connect.ui
+            connect.ui \
+    ordercomputers.ui

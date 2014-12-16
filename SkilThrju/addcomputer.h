@@ -13,7 +13,7 @@ class AddComputer : public QWidget
     Q_OBJECT
 
 public:
-    explicit AddComputer(QWidget *parent = 0);
+    explicit AddComputer();
     ~AddComputer();
     ComputerService compService;
 
