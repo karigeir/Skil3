@@ -1,4 +1,5 @@
 #include "scientistrepository.h"
+#include "databasemanager.h"
 #include <QtSql>
 #include <QSqlQuery>
 #include <QSqlDatabase>
@@ -9,6 +10,8 @@
 
 
 ScientistRepository::ScientistRepository(std::string fname) {
+    db = databasemanager::getDatabaseConnection();
+
     filename = fname;
     delimiter = '\t';
     std::ifstream scientistFile;
@@ -41,29 +44,6 @@ ScientistRepository::ScientistRepository(std::string fname) {
 ScientistRepository::~ScientistRepository() {
 }
 
-QSqlDatabase ScientistRepository::databaseConnect()
-{
-    QString connectionName = "ScientistConnection";
-
-    QSqlDatabase db;
-
-    if (QSqlDatabase::contains(connectionName))
-    {
-        db = QSqlDatabase::database(connectionName);
-    }
-    else
-    {
-        db = QSqlDatabase::addDatabase("QSQLITE", connectionName);
-        db.setDatabaseName("Skil2.sqlite");
-    }
-
-    db.open();
-    //query.prepare("PRAGMA foreign_keys ON");
-    //query.exec();
-    //query.clear();
-
-    return db;
-}
 
 void ScientistRepository::add(Scientist scientist) {
     // Replace our chosen delimiter with space to avoid breaking the delimited format of the file
@@ -71,7 +51,6 @@ void ScientistRepository::add(Scientist scientist) {
     scientistList.push_back(scientist);
     save();
 
-    QSqlDatabase db = databaseConnect();
     QSqlQuery query(db);
 
     QVariant qstrName = QVariant(QString::fromStdString(scientist.name));
@@ -88,7 +67,8 @@ void ScientistRepository::add(Scientist scientist) {
         query.bindValue(":DateOfDeath",qstrDeath);
         query.bindValue(":Gender",qstrGender);
 
-        query.exec();
+        cout << query.exec() << endl;
+        qDebug() << query.lastError();
 }
 
 
@@ -96,7 +76,6 @@ std::list<Scientist> ScientistRepository::list() {
 
     std::list<Scientist> scientists = std::list<Scientist>();
 
-    QSqlDatabase db = databaseConnect();
     QSqlQuery query(db);
 
     query.exec("SELECT * FROM Scientists");
@@ -115,8 +94,6 @@ std::list<Scientist> ScientistRepository::list() {
 
 std::list<Scientist> ScientistRepository::list(int col, int mod)
 {
-
-    QSqlDatabase db = databaseConnect();
     QSqlQuery query(db);
 
 //    string sorter;
@@ -234,7 +211,6 @@ void ScientistRepository::save() {
 
 std::list<Scientist> ScientistRepository::search(std::string searchTerm)
 {
-    QSqlDatabase db = databaseConnect();
     QSqlQuery query(db);
 
     query.exec(QString::fromStdString("Select * from Scientists where Name like '%" + searchTerm + "%'"));

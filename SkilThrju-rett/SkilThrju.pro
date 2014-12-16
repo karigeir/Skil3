@@ -32,7 +32,8 @@ SOURCES += main.cpp\
     addcomputer.cpp \
     orderscientists.cpp\
     connect.cpp \
-    ordercomputers.cpp
+    ordercomputers.cpp \
+    databasemanager.cpp
 
 
 
@@ -54,7 +55,8 @@ HEADERS  += mainwindow.h\
             addcomputer.h\
             orderscientists.h\
             connect.h \
-    ordercomputers.h
+    ordercomputers.h \
+    databasemanager.h
 
 
 FORMS    += mainwindow.ui\

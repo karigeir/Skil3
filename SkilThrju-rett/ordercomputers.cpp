@@ -11,7 +11,7 @@ orderComputers::orderComputers() :
     ui->setupUi(this);
     ui->ComputerSearch_lineEdit->setPlaceholderText("Search Computers here..");
     ui->displayComputers_tableWidget->clearContents();
-    ui->displayComputers_tableWidget->setRowCount(12);
+    ui->displayComputers_tableWidget->setRowCount(30);
     ui->displayComputers_tableWidget->setColumnCount(4);
 
     getAllComputers();

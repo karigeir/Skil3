@@ -9,8 +9,8 @@ class ConnectRepository
 {
 public:
     ConnectRepository();
+    QSqlDatabase db;
     void add(int scientistId, int computerId);
-    QSqlDatabase databaseConnect();
     std::list<Connection> display();
 };
 

@@ -1,10 +1,9 @@
+#include <QSqlDatabase>
 #ifndef DATABASEMANAGER_H
 #define DATABASEMANAGER_H
 
-class databaseManager
-{
-public:
-    databaseManager();
-};
+namespace databasemanager {
+    QSqlDatabase getDatabaseConnection();
+}
 
 #endif // DATABASEMANAGER_H

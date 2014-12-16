@@ -1,4 +1,5 @@
 #include "connectrepository.h"
+#include "databasemanager.h"
 #include <iostream>
 #include <QSqlDatabase>
 #include <QVariant>
@@ -10,32 +11,11 @@ using namespace std;
 
 ConnectRepository::ConnectRepository()
 {
-}
-
-QSqlDatabase ConnectRepository::databaseConnect()
-{
-    QString connectionName = "ConnectConnection";
-
-    QSqlDatabase db;
-
-    if (QSqlDatabase::contains(connectionName))
-    {
-        db = QSqlDatabase::database(connectionName);
-    }
-    else
-    {
-        db = QSqlDatabase::addDatabase("QSQLITE", connectionName);
-        db.setDatabaseName("Skil2.sqlite");
-    }
-
-    db.open();
-
-    return db;
+    db = databasemanager::getDatabaseConnection();
 }
 
 void ConnectRepository::add(int scientistID, int computerID)
 {
-    QSqlDatabase db = databaseConnect();
     QSqlQuery query(db);
 
     QVariant qstrScientistId = QVariant(scientistID);
@@ -52,7 +32,6 @@ void ConnectRepository::add(int scientistID, int computerID)
 }
 std::list<Connection> ConnectRepository::display()
 {
-    QSqlDatabase db = databaseConnect();
     QSqlQuery query(db);
     query.exec("Select s.Name as ScientistsName, c.Name as ComputersName from Computers c, Scientists s, Connection co where co.ScientistId = s.ID and co.ComputerId = c.Id");
 

@@ -32,6 +32,7 @@ private:
     std::list<Scientist> scientistList;
     // The filename of the file that is used to persist data
     std::string filename;
+    QSqlDatabase db;
     // The character that delimits each column of a line
     char delimiter;
     // Deep copies the private list and returns a new instance

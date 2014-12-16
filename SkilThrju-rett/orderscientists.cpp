@@ -19,7 +19,7 @@ orderScientists::orderScientists() :
     ui->setupUi(this);
     ui->Search_lineEdit->setPlaceholderText("Search Scientists here..");
     ui->displayScientists_tableWidget->clearContents();
-    ui->displayScientists_tableWidget->setRowCount(15);
+    ui->displayScientists_tableWidget->setRowCount(30);
     ui->displayScientists_tableWidget->setColumnCount(4);
     //ui->listWidget->addItem("world");
 

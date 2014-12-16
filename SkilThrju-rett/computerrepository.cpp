@@ -1,5 +1,6 @@
 #include "computerrepository.h"
 #include "computer.h"
+#include "databasemanager.h"
 #include <iostream>
 #include <QtSql>
 #include <QSqlQuery>
@@ -10,57 +11,42 @@
 
 ComputerRepository::ComputerRepository()
 {
-}
-
-QSqlDatabase ComputerRepository::databaseConnect()
-{
-    QString connectionName = "ComputerConnection";
-
-    QSqlDatabase db;
-
-    if (QSqlDatabase::contains(connectionName))
-    {
-        db = QSqlDatabase::database(connectionName);
-    }
-    else
-    {
-        db = QSqlDatabase::addDatabase("QSQLITE", connectionName);
-        db.setDatabaseName("Skil2.sqlite");
-    }
-
-    db.open();
-
-    return db;
+    db = databasemanager::getDatabaseConnection();
 }
 
 void ComputerRepository::add(Computer a)
 {
-//    std::replace(scientist.name.begin(),scientist.name.end(),delimiter,' ');
-//    scientistList.push_back(scientist);
-//    save();
+//    QSqlQuery query(db);
 
-    QSqlDatabase db = databaseConnect();
+//    query.prepare("INSERT INTO Computers (Name,YearBuilt,Type,Was_Built) VALUES(?,?,?,?)");
+
+//    query.bindValue(0,QString::fromStdString(a.name));
+//    query.bindValue(1,QString::fromStdString(a.yearBuilt));
+//    query.bindValue(2,QString::fromStdString(a.type));
+//    query.bindValue(3,QString::fromStdString(a.was_built));
+
     QSqlQuery query(db);
 
     QVariant qstrName = QVariant(QString::fromStdString(a.name));
-    QVariant qstrYearBuilt = QVariant(QString::fromStdString(a.yearBuilt));
+    QVariant qstryearBuilt = QVariant(QString::fromStdString(a.yearBuilt));
     QVariant qstrType = QVariant(QString::fromStdString(a.type));
-    QVariant qstrWas_Built = QVariant(QString::fromStdString(a.was_built));
+    QVariant qstrwas_built = QVariant(QString::fromStdString(a.was_built));
+
 
     query.prepare("INSERT INTO Computers ('Name', 'YearBuilt', 'Type', 'Was_Built')"
                               "VALUES(:Name, :YearBuilt, :Type, :Was_Built)");
 
         query.bindValue(":Name",qstrName);
-        query.bindValue(":YearBuilt",qstrYearBuilt);
+        query.bindValue(":YearBuilt",qstryearBuilt);
         query.bindValue(":Type",qstrType);
-        query.bindValue(":Was_Built",qstrWas_Built);
+        query.bindValue(":Was_Built",qstrwas_built);
 
-        query.exec();
+        cout << query.exec() << endl;
+        qDebug() << query.lastError();
 }
 
 std::list<Computer> ComputerRepository::list(int col, int mod)
 {
-    QSqlDatabase db = databaseConnect();
     QSqlQuery query(db);
 
     string sorter;
@@ -129,7 +115,6 @@ std::list<Computer> ComputerRepository::list(int col, int mod)
 
 std::list<Computer> ComputerRepository::search(std::string searchTerm)
 {
-    QSqlDatabase db = databaseConnect();
     QSqlQuery query(db);
 
     query.exec(QString::fromStdString("Select * from Computers where Name like '%" + searchTerm + "%'"));
@@ -154,7 +139,6 @@ std::list<Computer> ComputerRepository::list() {
 
     std::list<Computer> computers = std::list<Computer>();
 
-    QSqlDatabase db = databaseConnect();
     QSqlQuery query(db);
 
     query.exec("SELECT * FROM Computers");

@@ -6,91 +6,76 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>622</width>
-    <height>406</height>
+    <width>190</width>
+    <height>157</height>
    </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>589</width>
+    <height>326</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QPushButton" name="AddComputer_pushButton">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>170</y>
-     <width>142</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Add</string>
-   </property>
-  </widget>
-  <widget class="QWidget" name="">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>50</y>
-     <width>139</width>
-     <height>111</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QLineEdit" name="ComputerName_lineEdit"/>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="ComputerYearBuilt_lineEdit"/>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="ComputerType_lineEdit"/>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="ComputerWasBuilt_lineEdit"/>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>50</y>
-     <width>55</width>
-     <height>111</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout_2">
-    <item>
-     <widget class="QLabel" name="ComputerName">
-      <property name="text">
-       <string>Name</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="YearBuilt">
-      <property name="text">
-       <string>Year Built</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="ComputerType">
-      <property name="text">
-       <string>Type</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="ComputerWasBuilt">
-      <property name="text">
-       <string>Was Built</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="5" column="1">
+    <widget class="QLineEdit" name="ComputerWasBuilt_lineEdit"/>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="ComputerName">
+     <property name="text">
+      <string>Name</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLineEdit" name="ComputerYearBuilt_lineEdit"/>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="ComputerName_lineEdit"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="YearBuilt">
+     <property name="text">
+      <string>Year Built</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QLineEdit" name="ComputerType_lineEdit"/>
+   </item>
+   <item row="8" column="1">
+    <widget class="QPushButton" name="AddComputer_pushButton">
+     <property name="text">
+      <string>Add</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="ComputerWasBuilt">
+     <property name="text">
+      <string>Was Built (y/n)</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="ComputerType">
+     <property name="text">
+      <string>Type </string>
+     </property>
+    </widget>
+   </item>
+  </layout>
  </widget>
+ <tabstops>
+  <tabstop>ComputerName_lineEdit</tabstop>
+  <tabstop>ComputerYearBuilt_lineEdit</tabstop>
+  <tabstop>ComputerType_lineEdit</tabstop>
+  <tabstop>ComputerWasBuilt_lineEdit</tabstop>
+  <tabstop>AddComputer_pushButton</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
