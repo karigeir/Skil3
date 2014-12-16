@@ -49,6 +49,18 @@ HEADERS  += mainwindow.h\
             scienceservice.h\
             scientist.h\
             scientistrepository.h\
+            utilities.h \
+    addscientist.h \
+    addcomputer.h \
+    orderscientists.h \
+    connect.h
+
+
+FORMS    += mainwindow.ui \
+    addscientist.ui \
+    addcomputer.ui\
+    orderscientists.ui \
+    connect.ui
             utilities.h\
             addscientist.h\
             addcomputer.h\
@@ -61,5 +73,5 @@ FORMS    += mainwindow.ui\
             addscientist.ui\
             addcomputer.ui\
             orderscientists.ui\
-            connect.ui \
-    ordercomputers.ui
+    ordercomputers.ui\
+            connect.ui
