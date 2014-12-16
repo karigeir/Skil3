@@ -2,6 +2,7 @@
 #include "ui_orderscientists.h"
 #include "scienceservice.h"
 #include <list>
+#include <string>
 #include <QtWidgets>
 #include <QListWidget>
 #include <QString>
@@ -44,7 +45,6 @@ void orderScientists::getAllScientists()
         currentScientist.dateOfBirth = iter->dateOfBirth;
         currentScientist.dateOfDeath = iter->dateOfDeath;
         currentScientist.gender = iter->gender;
-        cout << currentScientist.name << endl;
         ui->displayScientists_tableWidget->setItem(counter,0,new QTableWidgetItem(QString::fromStdString(currentScientist.name)));
         ui->displayScientists_tableWidget->setItem(counter,1,new QTableWidgetItem(QString::fromStdString(currentScientist.dateOfBirth)));
         ui->displayScientists_tableWidget->setItem(counter,2,new QTableWidgetItem(QString::fromStdString(currentScientist.dateOfDeath)));
@@ -61,18 +61,15 @@ void orderScientists::on_Search_lineEdit_textChanged(const QString &arg1)
 
 void orderScientists::on_SearchButton_clicked()
 {
-    cout << "Fer inni fall" << endl;
     std::string searchString = ui->Search_lineEdit->text().toStdString();
-    currentScientists = scienceService.getAllScientists();
+    currentScientists = scienceService.search(searchString);
 
     for (std::list<Scientist>::iterator iter = currentScientists.begin(); iter != currentScientists.end(); iter ++)
     {
-        if (searchString == iter->name)
-        {
-            cout << "fer inni annad fall" << endl;
-            cout << iter->name << endl;
-            //ui->displayScientists_tableWidget
-        }
-        break;
+        ui->displayScientists_tableWidget->clear();
+        ui->displayScientists_tableWidget->setItem(0,0,new QTableWidgetItem(QString::fromStdString(iter->name)));
+        ui->displayScientists_tableWidget->setItem(0,1,new QTableWidgetItem(QString::fromStdString(iter->dateOfBirth)));
+        ui->displayScientists_tableWidget->setItem(0,0,new QTableWidgetItem(QString::fromStdString(iter->dateOfDeath)));
+        ui->displayScientists_tableWidget->setItem(0,0,new QTableWidgetItem(QString::fromStdString(iter->gender)));
     }
 }
