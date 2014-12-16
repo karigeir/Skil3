@@ -6,13 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-<<<<<<< HEAD
     <width>619</width>
     <height>396</height>
-=======
-    <width>422</width>
-    <height>272</height>
->>>>>>> 56ac9482d59bf9da69204ce2f4c8206a67f60a03
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,6 +16,13 @@
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QLineEdit" name="Search_lineEdit"/>
+   </item>
+   <item>
+    <widget class="QPushButton" name="SearchButton">
+     <property name="text">
+      <string>Search</string>
+     </property>
+    </widget>
    </item>
    <item>
     <layout class="QGridLayout" name="gridLayout">

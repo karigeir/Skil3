@@ -48,17 +48,15 @@ HEADERS  += mainwindow.h\
             scienceservice.h\
             scientist.h\
             scientistrepository.h\
-            utilities.h \
-    addscientist.h \
-    addcomputer.h \
-    searchscientist.h\
-    orderscientists.h \
-    connect.h
+            utilities.h\
+            addscientist.h\
+            addcomputer.h\
+            orderscientists.h\
+            connect.h
 
 
-FORMS    += mainwindow.ui \
-    addscientist.ui \
-    addcomputer.ui\ 
-    searchscientist.ui\
-    orderscientists.ui \
-    connect.ui
+FORMS    += mainwindow.ui\
+            addscientist.ui\
+            addcomputer.ui\
+            orderscientists.ui\
+            connect.ui

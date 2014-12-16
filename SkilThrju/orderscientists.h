@@ -18,6 +18,11 @@ public:
     ScienceService scienceService;
 
     void getAllScientists();
+private slots:
+    void on_Search_lineEdit_textChanged(const QString &arg1);
+
+    void on_SearchButton_clicked();
+
 private:
     Ui::orderScientists *ui;
     std::list<Scientist> currentScientists;
