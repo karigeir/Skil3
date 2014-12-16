@@ -60,3 +60,16 @@ FORMS    += mainwindow.ui \
     addcomputer.ui\
     orderscientists.ui \
     connect.ui
+            utilities.h\
+            addscientist.h\
+            addcomputer.h\
+            orderscientists.h\
+            connect.h
+
+
+FORMS    += mainwindow.ui\
+            addscientist.ui\
+            addcomputer.ui\
+            orderscientists.ui\
+            connect.ui
+
